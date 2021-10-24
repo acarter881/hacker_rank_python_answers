@@ -4,12 +4,14 @@ import os
 import random
 import re
 import sys
+import re
 
-# Complete the solve function below.
+def to_upper(s):
+    return s.group(1) + s.group(2).upper()
+
 def solve(s):
-    s = s.split()
-    return s[0][0].upper() + s[0][1:] + ' ' + s[1][0].upper() + s[1][1:]
-
+    return re.sub('(^|\s)(\S)', to_upper, s)
+           
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
