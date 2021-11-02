@@ -1,5 +1,4 @@
 # TIP: Use Python3 instead of Pypy3
-
 import sys
 
 n = int(input())
